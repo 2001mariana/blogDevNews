@@ -1,0 +1,2 @@
+import Prismic from '@'
+
