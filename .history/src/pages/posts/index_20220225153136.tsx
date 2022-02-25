@@ -34,7 +34,8 @@ export default function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  
+  const prismic = getPrismicClient();
+
   return {
     props: {},
     revalidate: 60 * 60 * 12, // 12 horas

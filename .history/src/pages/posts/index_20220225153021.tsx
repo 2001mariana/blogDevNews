@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 import { getPrismicClient } from '../../services/prismic';
 
-import './posts.module.scss';
+import styles from './posts.module.scss';
 
 interface Post {
   id: string;
@@ -18,7 +18,7 @@ export default function Posts() {
   return (
     <>
       <SEO title="Posts" />
-      <main className="container">
+      <main className={styles}>
         <div className="posts">
           <Link href="#">
             <a>

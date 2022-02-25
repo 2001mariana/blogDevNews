@@ -5,7 +5,7 @@ import Link from 'next/link';
 import SEO from '../../components/SEO';
 import { getPrismicClient } from '../../services/prismic';
 
-import './posts.module.scss';
+import styles from './posts.module.scss';
 
 interface Post {
   id: string;
