@@ -34,17 +34,7 @@ export default function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
-
-  const response = await prismic.query(
-    [Prismic.predicates.at('', '')],
-    {
-      fetch: ['post.title', 'post.content'],
-    },
-  );
-
-  console.log(response);
-  
+  const prismic = getPrismicClient()
   return {
     props: {},
     revalidate: 60 * 60 * 12, // 12 horas

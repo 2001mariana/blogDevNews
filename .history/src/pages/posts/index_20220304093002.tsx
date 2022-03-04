@@ -1,9 +1,10 @@
-import Prismic from '@prismicio/client';
+//import Prismic from '@prismicio/client';
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 
 import SEO from '../../components/SEO';
-import { getPrismicClient } from '../../services/prismic';
+
+//import { getPrismicClient } from '../../services/prismic';
 
 import './posts.module.scss';
 
@@ -34,16 +35,6 @@ export default function Posts() {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const prismic = getPrismicClient();
-
-  const response = await prismic.query(
-    [Prismic.predicates.at('', '')],
-    {
-      fetch: ['post.title', 'post.content'],
-    },
-  );
-
-  console.log(response);
   
   return {
     props: {},
